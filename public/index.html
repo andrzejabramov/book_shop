@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookshop Debug</title>
+    <!-- Webpack Dev Server автоматически подключит стили через JS -->
+  </head>
+  <body>
+    <!-- Обертка для центрирования -->
+    <div class="app-wrapper">
+      <!-- 1. HEADER -->
+      <header class="header">HEADER (1440×116)</header>
+
+      <!-- 2. MAIN GRID -->
+      <main class="main-grid">
+        <!-- Row 1: Banner -->
+        <section class="banner">
+          BANNER (1120×702)
+          <span style="font-size: 14px; opacity: 0.8; margin-top: 8px">
+            top: 116px | left: 160px (absolute)
+          </span>
+        </section>
+
+        <!-- Row 2: Card Grid -->
+        <div class="card-grid">
+          <div class="card">Card 1</div>
+          <div class="card">Card 2</div>
+          <div class="card">Card 3</div>
+          <div class="card">Card 4</div>
+          <div class="card">Card 5</div>
+          <div class="card">Card 6</div>
+        </div>
+
+        <!-- Заглушки для рядов 3, 4, 5 (чтобы видеть высоты) -->
+        <div class="row-placeholder" style="grid-row: 4">ROW 3 (96px)</div>
+        <div class="row-placeholder" style="grid-row: 5">ROW 4 (45px)</div>
+      </main>
+    </div>
+
+    <!-- Скрипт бандла. В dev-режиме имя фиксированное (без хеша) -->
+    <script defer src="/js/main.js"></script>
+  </body>
+</html>

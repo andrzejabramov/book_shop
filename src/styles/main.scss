@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family:
+    system-ui,
+    -apple-system,
+    sans-serif;
+  background-color: #f5f5f5;
+  min-height: 100vh;
+  color: #333;
+}
+
+/* 1. Обёртка: строго в потоке, без верхних отступов */
+.app-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding-top: 0; /* ✅ Убрано */
+  margin: 0;
+}
+
+/* 2. Шапка: фиксированные размеры, не сжимается flex-ом */
+.header {
+  width: 1440px;
+  height: 116px;
+  background: var(--bg-header);
+  color: var(--text-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 600;
+  flex-shrink: 0; /* ✅ Запрещаем flex-сжатие */
+}
+
+/* 3. Грид: начинается сразу от нижней границы шапки */
+.main-grid {
+  width: 1120px;
+  margin: 0 auto; /* ✅ Исправлено: было margin-top: 0 auto (синтаксическая ошибка) */
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  /* ✅ 5 треков: Баннер | Пусто(180) | Карточки | Пусто(96) | Кнопка(45) */
+  grid-template-rows: 702px 180px auto 96px 45px;
+  gap: 0;
+}
+
+/* 4. Баннер: занимает 1-й трек (702px) */
+.banner {
+  grid-row: 1;
+  width: 100%;
+  background: var(--bg-banner);
+  color: var(--text-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+/* 5. Сетка карточек: занимает 3-й трек (auto растягивается под контент) */
+.card-grid {
+  grid-row: 3; /* ✅ Сдвинуто на 3, т.к. 2-й трек теперь = отступ 180px */
+  width: 100%;
+  padding-left: 196px;
+  /* ✅ margin-top/bottom удалены. Отступы контролируются строго гридом */
+
+  display: grid;
+  grid-template-columns: 424px 424px;
+  grid-template-rows: repeat(3, 300px);
+  column-gap: 76px;
+  row-gap: 96px;
+  background: var(--bg-card-grid);
+}
+
+/* 6. Карточка */
+.card {
+  width: 424px;
+  height: 300px;
+  border: 1px solid #4c3db2;
+  background: var(--bg-card);
+  color: var(--text-color);
+  font-size: 20px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 7. Контейнер кнопки: занимает 5-й трек (45px) */
+.button-row {
+  grid-row: 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Заглушка для отладки (визуализирует 5-й трек) */
+.row-placeholder {
+  grid-row: 5; /* Переопределяет .button-row в режиме отладки */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-row);
+  color: #e74c3c;
+  font-weight: 600;
+  font-size: 14px;
+  border: 1px dashed #c0392b;
+}
