@@ -1,5 +1,5 @@
 /* =========================================
-   SLIDER COMPONENT
+   SLIDER BASE STRUCTURE
    ========================================= */
 .banner {
   grid-row: 1;
@@ -35,33 +35,121 @@
   overflow: hidden;
 }
 
+/* =========================================
+   UNIVERSAL IMAGE RULES (для слайдов 1, 2...)
+   ========================================= */
 .slide__image {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  transform: scale(var(--slide-scale, 1));
   transition: transform 0.8s ease;
+  /* object-position и transform убраны → инлайн из JS побеждает */
 }
 
-/* Контейнер текста. Все .slide__text позиционируются ОТНОСИТЕЛЬНО него */
+/* Слайд 0 остаётся под строгим контролем CSS */
+.slide--0 .slide__image {
+  object-fit: contain !important;
+  object-position: bottom center !important;
+  transform: none !important;
+  max-width: 1016px;
+  margin: 0 auto;
+  box-shadow: 0px 6px 59px 0px rgba(53, 49, 84, 0.08);
+}
+
 .slide__content {
   position: relative;
   width: 100%;
   height: 100%;
 }
 
+/* =========================================
+   TEXT BLOCKS (VISUAL TYPES & MODIFIERS)
+   ========================================= */
 .slide__text {
   position: absolute;
-  white-space: nowrap;
+  text-align: center;
   font-family: "Montserrat", sans-serif;
+  line-height: 100%;
+  letter-spacing: 0%;
+  opacity: 1;
+  white-space: nowrap; /* По умолчанию: hug */
+}
+
+.slide__text--fixed {
+  white-space: normal;
+  word-break: break-word;
+  line-height: 1.2;
+}
+
+/* === STRICT === */
+.slide__text--strict {
+  font-weight: 600;
+  font-size: 25px;
+  text-transform: uppercase;
   color: #1c2a39;
-  /* Базовые стили сбрасываются, точные задашь через роли */
+}
+
+/* === ART === */
+.slide__text--art {
+  color: #ffffff;
+}
+
+.slide__text--art--headline {
+  font-weight: 700;
+  font-size: 60px;
+}
+
+.slide__text--art--display {
+  font-weight: 900;
+  font-size: 182px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+/* === TRANSFORM MODIFIERS === */
+.slide__text--uppercase {
+  text-transform: uppercase;
+}
+.slide__text--lowercase {
+  text-transform: lowercase;
 }
 
 /* =========================================
-   📐 ЗДЕСЬ БУДУТ ТВОИ ПАРАМЕТРЫ РОЛЕЙ
+   SLIDE 0: PEOPLE (IMAGE & POSITIONING)
    ========================================= */
-/* Когда соберёшь таблички, вставишь сюда: */
-/* .slide--0 .slide__text--role-1 { top: 15%; left: 10%; font-size: 24px; } */
-/* .slide--0 .slide__text--role-2 { top: 28%; left: 10%; font-size: 80px; } */
-/* и т.д. для каждого слайда и роли */
+.slide--0 .slide__image {
+  width: 1016px;
+  height: 452px;
+  margin: 228px 52px 21.5px 52px;
+  object-fit: contain;
+  /* shadow from #35315414 (8% opacity) */
+  box-shadow: 0px 6px 59px 0px #ffe0e2;
+}
+
+/* =========================================
+   SLIDE 1: TOP (IMAGE & TYPOGRAPHY)
+   ========================================= */
+
+/* Картинка: точное заполнение 1120×702 без искажений */
+.slide--1 .slide__image {
+  width: 1120px;
+  height: 702px;
+  margin: 0;
+  object-fit: contain;
+  box-shadow: none;
+}
+
+/* Специфичные размеры для вариантов слайда 1 */
+.slide--1 .slide__text--art--top-label {
+  font-weight: 900;
+  font-size: 160px;
+}
+
+.slide--1 .slide__text--art--display {
+  font-weight: 900;
+  font-size: 182px;
+}
+
+.slide--1 .slide__text--art--top-sub {
+  font-weight: 700;
+  font-size: 50px;
+}

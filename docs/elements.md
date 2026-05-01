@@ -244,4 +244,290 @@ const sliders = [
 
 # Слайды
 
-##
+## People
+
+### Typography common
+
+| param          | value     | describe |
+| -------------- | --------- | -------- |
+| font           | monserrat |          |
+| opacity        | 1         |          |
+| angle          | 0 deg     |          |
+| leading-trim   | NONE      |          |
+| line-height    | 100%      |          |
+| letter-spacing | 0%        |          |
+| text-align     | center    |          |
+
+## image position
+
+### slider-people
+
+| param       | value           | describe |
+| ----------- | --------------- | -------- |
+| width       | 1120px          |          |
+| height      | 702px           |          |
+| background  | #FFE0E2         |          |
+| box-shadow  | 0px 6px 59p 0px |          |
+| transparent | #35315414       |          |
+
+### people.png
+
+| param      | value                  | describe |
+| ---------- | ---------------------- | -------- |
+| width      | 1016px                 |          |
+| height     | 452px                  |          |
+| margin     | 228px 52px 21.5px 52px | srart    |
+| background | #FFE0E2                |          |
+
+### content-1 (parent typography-common)
+
+| param          | value                 | describe |
+| -------------- | --------------------- | -------- |
+| width          | 266px                 |          |
+| height         | 30px                  |          |
+| margin         | 69px 427px auto 427px |          |
+| content        | Black friday sale     |          |
+| weight         | 600                   |          |
+| size           | 25px                  |          |
+| text-transform | uppercase             |          |
+| color          | #1C2A39               |          |
+
+### content-2
+
+| param               | value                  | describe |
+| ------------------- | ---------------------- | -------- |
+| width               | 170px                  |          |
+| height              | 78px                   |          |
+| margin              | 104px 642px auto 308px |          |
+| content             | up to                  |          |
+| weight              | 700                    |          |
+| size                | 60px                   |          |
+| text-transform      | lowercase              |          |
+| color-main          | #FFFFFF                |          |
+| color-shadow        | #534FD2                |          |
+| shift-shadow-right  | 6px                    |          |
+| shift-shadow-bottom | 6px                    |          |
+
+### content-3
+
+| param               | value                 | describe |
+| ------------------- | --------------------- | -------- |
+| width               | 247px                 |          |
+| height              | 222px                 |          |
+| margin              | 79px 541px auto 476px |          |
+| content             | 60                    |          |
+| weight              | 900                   |          |
+| size                | 182px                 |          |
+| text-transform      | uppercase             |          |
+| color-main          | #FFFFFF               |          |
+| color-shadow        | #534FD2               |          |
+| shift-shadow-right  | 13px                  |          |
+| shift-shadow-bottom | 13px                  |          |
+
+## content-4
+
+| param               | value                  | describe |
+| ------------------- | ---------------------- | -------- |
+| width               | 58px                   |          |
+| height              | 78px                   |          |
+| margin              | 197px 325px auto 737px |          |
+| content             | %                      |          |
+| weight              | 700                    |          |
+| size                | 60px                   |          |
+| text-transform      | uppercase              |          |
+| color-main          | #FFFFFF                |          |
+| color-shadow        | #534FD2                |          |
+| shift-shadow-right  | 6px                    |          |
+| shift-shadow-bottom | 6px                    |          |
+
+## top
+
+### Typography common
+
+| param          | value     | describe |
+| -------------- | --------- | -------- |
+| font           | monserrat |          |
+| opacity        | 1         |          |
+| angle          | 0 deg     |          |
+| leading-trim   | NONE      |          |
+| line-height    | 100%      |          |
+| letter-spacing | 0%        |          |
+| text-align     | center    |          |
+
+## image position
+
+### slider-top
+
+| param  | value  | describe |
+| ------ | ------ | -------- |
+| width  | 1120px |          |
+| height | 702px  |          |
+
+### top.png
+
+| param  | value  | describe |
+| ------ | ------ | -------- |
+| width  | 1120px |          |
+| height | 702px  |          |
+| margin | 0      |          |
+
+### content-1 (parent typography-common) - как и для первого слайда - strict
+
+| param          | value                 | describe |
+| -------------- | --------------------- | -------- |
+| width          | 293px hug             |          |
+| height         | 30px                  |          |
+| margin         | 243px auto auto 767px |          |
+| content        | for entrepreneurs     |          |
+| weight         | 600                   |          |
+| size           | 25px                  |          |
+| text-transform | uppercase             |          |
+| color          | #1C2A39               |          |
+
+### content-2
+
+| param               | value                | describe |
+| ------------------- | -------------------- | -------- |
+| width               | 111px hug            |          |
+| height              | 78px                 |          |
+| margin              | 73px auto auto 103px |          |
+| content             | top                  |          |
+| weight              | 900                  |          |
+| size                | 160px                |          |
+| text-transform      | uppercase            |          |
+| color-main          | #FFFFFF              |          |
+| color-shadow        | #534FD2              |          |
+| shift-shadow-right  | 13px                 |          |
+| shift-shadow-bottom | 13px                 |          |
+
+### content-3
+
+| param               | value                 | describe |
+| ------------------- | --------------------- | -------- |
+| width               | 189px hug             |          |
+| height              | 208px                 |          |
+| margin              | 112px auto auto 103px |          |
+| content             | 10                    |          |
+| weight              | 900                   |          |
+| size                | 182px                 |          |
+| text-transform      | uppercase             |          |
+| color-main          | #FFFFFF               |          |
+| color-shadow        | #534FD2               |          |
+| shift-shadow-right  | 13px                  |          |
+| shift-shadow-bottom | 13px                  |          |
+
+## content-4
+
+| param               | value                 | describe |
+| ------------------- | --------------------- | -------- |
+| width               | 164px hug             |          |
+| height              | 66px                  |          |
+| margin              | 214px auto auto 307px |          |
+| content             | books                 |          |
+| weight              | 700                   |          |
+| size                | 50px                  |          |
+| text-transform      | lowercase             |          |
+| color-main          | #FFFFFF               |          |
+| color-shadow        | #534FD2               |          |
+| shift-shadow-right  | 5px                   |          |
+| shift-shadow-bottom | 5px                   |          |
+
+## top
+
+### Typography common
+
+| param          | value     | describe |
+| -------------- | --------- | -------- |
+| font           | monserrat |          |
+| opacity        | 1         |          |
+| angle          | 0 deg     |          |
+| leading-trim   | NONE      |          |
+| line-height    | 100%      |          |
+| letter-spacing | 0%        |          |
+| text-align     | center    |          |
+
+## image position
+
+### slider-leaves_trees
+
+| param  | value  | describe |
+| ------ | ------ | -------- |
+| width  | 1120px |          |
+| height | 702px  |          |
+
+### leaves|\_trees.png
+
+| param  | value  | describe |
+| ------ | ------ | -------- |
+| width  | 1120px |          |
+| height | 702px  |          |
+| margin | 0      |          |
+
+### content-1 (parent typography-common) - как и для первого слайда - strict
+
+| param          | value                 | describe |
+| -------------- | --------------------- | -------- |
+| width          | 278px hug             |          |
+| height         | 55px                  |          |
+| margin         | 148px auto auto 425px |          |
+| content        | Check out             |          |
+| weight         | 600                   |          |
+| size           | 45px                  |          |
+| text-transform | uppercase             |          |
+| color          | #1C2A39               |          |
+
+### content-2
+
+| param               | value                    | describe |
+| ------------------- | ------------------------ | -------- |
+| width               | 653px strict!!!          |          |
+| height              | 342px                    |          |
+| margin              | 212px auto auto 233px    |          |
+| content             | OUR cozy books Selection |          |
+| weight              | 900                      |          |
+| size                | 90px                     |          |
+| text-transform      | uppercase                |          |
+| color-main          | #FFFFFF                  |          |
+| color-shadow        | #7B1010                  |          |
+| shift-shadow-right  | 10px                     |          |
+| shift-shadow-bottom | 10px                     |          |
+
+## count-cart
+
+### block-ellipse привязка parent header
+
+| param   | value                | describe    |
+| ------- | -------------------- | ----------- |
+| width   | 13px                 |             |
+| height  | 13px                 |             |
+| margin  | 61px 155px auto auto |             |
+| z-index | 1                    | поверх cart |
+
+### ellipce (parent block-ellipce)
+
+| param       | value   | describe    |
+| ----------- | ------- | ----------- |
+| width       | 13px    |             |
+| height      | 13px    |             |
+| margin      | 0       |             |
+| z-index     | 1       | поверх cart |
+| breakground | #FF353A |             |
+
+### digite (parent block-ellipce)
+
+| param          | value      | describe       |
+| -------------- | ---------- | -------------- |
+| width          | 6px        |                |
+| height         | 12px       |                |
+| horizontal     | center     |                |
+| z-index        | 1          | поверх ellipce |
+| content        | 1          |                |
+| breakground    | #FFFFFF    |                |
+| font-family    | Montserrat |                |
+| font-weight    | 500        |                |
+| font-style     | Medium     |                |
+| font-size      | 10px       | поверх ellipce |
+| leading-trim   | NONE       |                |
+| line-height    | 100%       |                |
+| letter-spacing | 0%         |                |
+| text-transform | capitalize |                |
