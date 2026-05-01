@@ -24,19 +24,12 @@ body {
   margin: 0;
 }
 
-/* 2. Шапка: фиксированные размеры, не сжимается flex-ом */
-.header {
-  width: 1440px;
-  height: 116px;
-  background: var(--bg-header);
-  color: var(--text-color);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 18px;
-  font-weight: 600;
-  flex-shrink: 0; /* ✅ Запрещаем flex-сжатие */
-}
+/* =========================================
+   COMPONENT IMPORTS
+   ========================================= */
+@import "components/header";
+@import "components/slider";
+@import "debug"; // Отладочные цвета/рамки
 
 /* 3. Грид: начинается сразу от нижней границы шапки */
 .main-grid {
@@ -46,8 +39,9 @@ body {
   display: grid;
   grid-template-columns: 1fr;
   /* ✅ 5 треков: Баннер | Пусто(180) | Карточки | Пусто(96) | Кнопка(45) */
-  grid-template-rows: 702px 180px auto 96px 45px;
+  grid-template-rows: 702px 46px 134px auto 96px 45px;
   gap: 0;
+  margin-bottom: 74px;
 }
 
 /* 4. Баннер: занимает 1-й трек (702px) */
@@ -62,6 +56,34 @@ body {
   flex-direction: column;
   font-size: 24px;
   font-weight: 600;
+}
+
+.grid-separator {
+  grid-row: 2; /* Занимает новый трек 46px */
+  width: 56px;
+  height: 12px;
+  align-self: center; /* Вертикальное центрирование в треке */
+  justify-self: center; /* Горизонтальное центрирование в колонке */
+  /* background: var(--bg-row); /* Временная заливка для отладки */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+grid-separator__dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%; /* Круг/эллипс */
+  border: none;
+  background: #efeef6; /* not active */
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.3s ease;
+
+  &.active {
+    background: #9e98dc; /* active */
+  }
 }
 
 /* 5. Сетка карточек: занимает 3-й трек (auto растягивается под контент) */
@@ -93,23 +115,56 @@ body {
   justify-content: center;
 }
 
-/* 7. Контейнер кнопки: занимает 5-й трек (45px) */
-.button-row {
+/* Контейнер 5-го ряда */
+.row-placeholder {
   grid-row: 5;
+  width: 100%;
+  height: 45px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start; /* ✅ Позволяет margin-left работать точно */
+  background: var(--bg-row);
 }
 
-/* Заглушка для отладки (визуализирует 5-й трек) */
-.row-placeholder {
-  grid-row: 5; /* Переопределяет .button-row в режиме отладки */
+/* Кнопка */
+.load-more-btn {
+  width: 176px;
+  height: 45px;
+  margin-left: 581px; /* ✅ Точное смещение по ТЗ */
+  border: 1px solid #4c3db2;
+  background: transparent;
+  cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--bg-row);
-  color: #e74c3c;
-  font-weight: 600;
-  font-size: 14px;
-  border: 1px dashed #c0392b;
+  padding: 0;
 }
+
+/* Текст кнопки */
+.load-more-btn__text {
+  width: 53px;
+  height: 10px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 10px;
+  line-height: 100%;
+  text-align: center;
+  color: #4c3db2;
+  font-weight: 700;
+  display: block;
+}
+
+/* ЯВНАЯ ПРИВЯЗКА ЭЛЕМЕНТОВ К ТРЕКАМ */
+.banner {
+  grid-row: 1;
+} /* Слайдер → 1-й трек (702px) */
+.grid-separator {
+  grid-row: 2;
+} /* Разделитель → 2-й трек (46px) */
+/* 3-й трек (134px) — пустой. Grid сам держит высоту, div не нужен */
+.card-grid {
+  grid-row: 4;
+} /* Карточки → 4-й трек (auto) */
+/* 5-й трек (96px) — пустой */
+.row-placeholder {
+  grid-row: 6;
+} /* Кнопка → 6-й трек (45px) */

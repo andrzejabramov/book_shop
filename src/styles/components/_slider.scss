@@ -1,0 +1,67 @@
+/* =========================================
+   SLIDER COMPONENT
+   ========================================= */
+.banner {
+  grid-row: 1;
+  width: 100%;
+  height: 702px;
+  position: relative;
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.6s ease,
+    visibility 0.6s ease;
+  background: var(--slide-bg);
+  z-index: 1;
+}
+
+.slide.active {
+  opacity: 1;
+  visibility: visible;
+  z-index: 2;
+}
+
+.slide__bg {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.slide__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(var(--slide-scale, 1));
+  transition: transform 0.8s ease;
+}
+
+/* Контейнер текста. Все .slide__text позиционируются ОТНОСИТЕЛЬНО него */
+.slide__content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.slide__text {
+  position: absolute;
+  white-space: nowrap;
+  font-family: "Montserrat", sans-serif;
+  color: #1c2a39;
+  /* Базовые стили сбрасываются, точные задашь через роли */
+}
+
+/* =========================================
+   📐 ЗДЕСЬ БУДУТ ТВОИ ПАРАМЕТРЫ РОЛЕЙ
+   ========================================= */
+/* Когда соберёшь таблички, вставишь сюда: */
+/* .slide--0 .slide__text--role-1 { top: 15%; left: 10%; font-size: 24px; } */
+/* .slide--0 .slide__text--role-2 { top: 28%; left: 10%; font-size: 80px; } */
+/* и т.д. для каждого слайда и роли */
