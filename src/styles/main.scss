@@ -29,6 +29,7 @@ body {
    ========================================= */
 @import "components/header";
 @import "components/slider";
+@import "components/_card";
 @import "debug"; // Отладочные цвета/рамки
 
 /* 3. Грид: начинается сразу от нижней границы шапки */
@@ -58,36 +59,10 @@ body {
   font-weight: 600;
 }
 
-.grid-separator {
-  grid-row: 2; /* Занимает новый трек 46px */
-  width: 56px;
-  height: 12px;
-  align-self: center; /* Вертикальное центрирование в треке */
-  justify-self: center; /* Горизонтальное центрирование в колонке */
-  /* background: var(--bg-row); /* Временная заливка для отладки */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-}
-
-grid-separator__dot {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%; /* Круг/эллипс */
-  border: none;
-  background: #efeef6; /* not active */
-  cursor: pointer;
-  padding: 0;
-  transition: background 0.3s ease;
-
-  &.active {
-    background: #9e98dc; /* active */
-  }
-}
-
 /* 5. Сетка карточек: занимает 3-й трек (auto растягивается под контент) */
 .card-grid {
+  position: relative;
+  z-index: 2;
   grid-row: 3; /* ✅ Сдвинуто на 3, т.к. 2-й трек теперь = отступ 180px */
   width: 100%;
   padding-left: 196px;

@@ -11,6 +11,11 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap"
       rel="stylesheet"
     />
+    <!-- ✅ Open Sans для автора/описания/отзывов (по ТЗ) -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div class="app-wrapper">
@@ -48,24 +53,399 @@
         </div>
       </header>
 
-      <!-- ✅ MAIN GRID (оставляем без изменений) -->
+      <!-- ✅ MAIN GRID -->
       <main class="main-grid">
         <section class="banner" id="slider-container"></section>
-        <!-- ✅ Новый разделитель -->
+
+        <!-- ✅ Разделитель -->
         <div class="grid-separator">
           <span class="grid-separator__content"></span>
         </div>
+
+        <!-- ✅ CARD GRID (обновлено: 6 карточек по ТЗ) -->
         <div class="card-grid">
-          <div class="card">Card 1</div>
-          <div class="card">Card 2</div>
-          <div class="card">Card 3</div>
-          <div class="card">Card 4</div>
-          <div class="card">Card 5</div>
-          <div class="card">Card 6</div>
+          <!-- Карточка 1 -->
+          <article class="card">
+            <div class="card__cover">
+              <img src="/img/book-4.png" alt="Cover" class="card__image" />
+            </div>
+            <div class="card__info">
+              <p class="card__author">Aldous Huxley</p>
+              <h3 class="card__name">Brave new world</h3>
+              <div class="card__rating">
+                <div class="card__stars">
+                  <svg
+                    class="card__star card__star--active"
+                    viewBox="0 0 12 12"
+                  >
+                    <path
+                      d="M6 0l1.5 4.5H12l-3.5 2.5 1.5 4.5L6 8.5 2.5 11l1.5-4.5L0 4.5h4.5z"
+                    />
+                  </svg>
+                  <svg
+                    class="card__star card__star--active"
+                    viewBox="0 0 12 12"
+                  >
+                    <path
+                      d="M6 0l1.5 4.5H12l-3.5 2.5 1.5 4.5L6 8.5 2.5 11l1.5-4.5L0 4.5h4.5z"
+                    />
+                  </svg>
+                  <svg
+                    class="card__star card__star--active"
+                    viewBox="0 0 12 12"
+                  >
+                    <path
+                      d="M6 0l1.5 4.5H12l-3.5 2.5 1.5 4.5L6 8.5 2.5 11l1.5-4.5L0 4.5h4.5z"
+                    />
+                  </svg>
+                  <svg
+                    class="card__star card__star--active"
+                    viewBox="0 0 12 12"
+                  >
+                    <path
+                      d="M6 0l1.5 4.5H12l-3.5 2.5 1.5 4.5L6 8.5 2.5 11l1.5-4.5L0 4.5h4.5z"
+                    />
+                  </svg>
+                  <svg
+                    class="card__star card__star--inactive"
+                    viewBox="0 0 12 12"
+                  >
+                    <path
+                      d="M6 0l1.5 4.5H12l-3.5 2.5 1.5 4.5L6 8.5 2.5 11l1.5-4.5L0 4.5h4.5z"
+                    />
+                  </svg>
+                </div>
+                <span class="card__reviews">1,3M review</span>
+              </div>
+              <p class="card__describe">
+                dystopian novel written in 1931 by English author Aldous Huxley,
+                and published in 1932. Largely set in...
+              </p>
+              <span class="card__price">$12.43</span>
+              <button class="card__btn load-more-btn">Add to cart</button>
+            </div>
+          </article>
+
+          <!-- Карточка 2 (идентичная) -->
+          <article class="card">
+            <div class="card__cover">
+              <img src="/img/book-4.png" alt="Cover" class="card__image" />
+            </div>
+            <div class="card__info">
+              <p class="card__author">Aldous Huxley</p>
+              <h3 class="card__name">Brave new world</h3>
+              <div class="card__rating">
+                <div class="card__stars">
+                  <svg
+                    class="card__star card__star--active"
+                    viewBox="0 0 12 12"
+                  >
+                    <path
+                      d="M6 0l1.5 4.5H12l-3.5 2.5 1.5 4.5L6 8.5 2.5 11l1.5-4.5L0 4.5h4.5z"
+                    />
+                  </svg>
+                  <svg
+                    class="card__star card__star--active"
+                    viewBox="0 0 12 12"
+                  >
+                    <path
+                      d="M6 0l1.5 4.5H12l-3.5 2.5 1.5 4.5L6 8.5 2.5 11l1.5-4.5L0 4.5h4.5z"
+                    />
+                  </svg>
+                  <svg
+                    class="card__star card__star--active"
+                    viewBox="0 0 12 12"
+                  >
+                    <path
+                      d="M6 0l1.5 4.5H12l-3.5 2.5 1.5 4.5L6 8.5 2.5 11l1.5-4.5L0 4.5h4.5z"
+                    />
+                  </svg>
+                  <svg
+                    class="card__star card__star--active"
+                    viewBox="0 0 12 12"
+                  >
+                    <path
+                      d="M6 0l1.5 4.5H12l-3.5 2.5 1.5 4.5L6 8.5 2.5 11l1.5-4.5L0 4.5h4.5z"
+                    />
+                  </svg>
+                  <svg
+                    class="card__star card__star--inactive"
+                    viewBox="0 0 12 12"
+                  >
+                    <path
+                      d="M6 0l1.5 4.5H12l-3.5 2.5 1.5 4.5L6 8.5 2.5 11l1.5-4.5L0 4.5h4.5z"
+                    />
+                  </svg>
+                </div>
+                <span class="card__reviews">1,3M review</span>
+              </div>
+              <p class="card__describe">
+                dystopian novel written in 1931 by English author Aldous Huxley,
+                and published in 1932. Largely set in...
+              </p>
+              <span class="card__price">$12.43</span>
+              <button class="card__btn load-more-btn">Add to cart</button>
+            </div>
+          </article>
+
+          <!-- Карточка 3 -->
+          <article class="card">
+            <div class="card__cover">
+              <img src="/img/book-4.png" alt="Cover" class="card__image" />
+            </div>
+            <div class="card__info">
+              <p class="card__author">Aldous Huxley</p>
+              <h3 class="card__name">Brave new world</h3>
+              <div class="card__rating">
+                <div class="card__stars">
+                  <svg
+                    class="card__star card__star--active"
+                    viewBox="0 0 12 12"
+                  >
+                    <path
+                      d="M6 0l1.5 4.5H12l-3.5 2.5 1.5 4.5L6 8.5 2.5 11l1.5-4.5L0 4.5h4.5z"
+                    />
+                  </svg>
+                  <svg
+                    class="card__star card__star--active"
+                    viewBox="0 0 12 12"
+                  >
+                    <path
+                      d="M6 0l1.5 4.5H12l-3.5 2.5 1.5 4.5L6 8.5 2.5 11l1.5-4.5L0 4.5h4.5z"
+                    />
+                  </svg>
+                  <svg
+                    class="card__star card__star--active"
+                    viewBox="0 0 12 12"
+                  >
+                    <path
+                      d="M6 0l1.5 4.5H12l-3.5 2.5 1.5 4.5L6 8.5 2.5 11l1.5-4.5L0 4.5h4.5z"
+                    />
+                  </svg>
+                  <svg
+                    class="card__star card__star--active"
+                    viewBox="0 0 12 12"
+                  >
+                    <path
+                      d="M6 0l1.5 4.5H12l-3.5 2.5 1.5 4.5L6 8.5 2.5 11l1.5-4.5L0 4.5h4.5z"
+                    />
+                  </svg>
+                  <svg
+                    class="card__star card__star--inactive"
+                    viewBox="0 0 12 12"
+                  >
+                    <path
+                      d="M6 0l1.5 4.5H12l-3.5 2.5 1.5 4.5L6 8.5 2.5 11l1.5-4.5L0 4.5h4.5z"
+                    />
+                  </svg>
+                </div>
+                <span class="card__reviews">1,3M review</span>
+              </div>
+              <p class="card__describe">
+                dystopian novel written in 1931 by English author Aldous Huxley,
+                and published in 1932. Largely set in...
+              </p>
+              <span class="card__price">$12.43</span>
+              <button class="card__btn load-more-btn">Add to cart</button>
+            </div>
+          </article>
+
+          <!-- Карточка 4 -->
+          <article class="card">
+            <div class="card__cover">
+              <img src="/img/book-4.png" alt="Cover" class="card__image" />
+            </div>
+            <div class="card__info">
+              <p class="card__author">Aldous Huxley</p>
+              <h3 class="card__name">Brave new world</h3>
+              <div class="card__rating">
+                <div class="card__stars">
+                  <svg
+                    class="card__star card__star--active"
+                    viewBox="0 0 12 12"
+                  >
+                    <path
+                      d="M6 0l1.5 4.5H12l-3.5 2.5 1.5 4.5L6 8.5 2.5 11l1.5-4.5L0 4.5h4.5z"
+                    />
+                  </svg>
+                  <svg
+                    class="card__star card__star--active"
+                    viewBox="0 0 12 12"
+                  >
+                    <path
+                      d="M6 0l1.5 4.5H12l-3.5 2.5 1.5 4.5L6 8.5 2.5 11l1.5-4.5L0 4.5h4.5z"
+                    />
+                  </svg>
+                  <svg
+                    class="card__star card__star--active"
+                    viewBox="0 0 12 12"
+                  >
+                    <path
+                      d="M6 0l1.5 4.5H12l-3.5 2.5 1.5 4.5L6 8.5 2.5 11l1.5-4.5L0 4.5h4.5z"
+                    />
+                  </svg>
+                  <svg
+                    class="card__star card__star--active"
+                    viewBox="0 0 12 12"
+                  >
+                    <path
+                      d="M6 0l1.5 4.5H12l-3.5 2.5 1.5 4.5L6 8.5 2.5 11l1.5-4.5L0 4.5h4.5z"
+                    />
+                  </svg>
+                  <svg
+                    class="card__star card__star--inactive"
+                    viewBox="0 0 12 12"
+                  >
+                    <path
+                      d="M6 0l1.5 4.5H12l-3.5 2.5 1.5 4.5L6 8.5 2.5 11l1.5-4.5L0 4.5h4.5z"
+                    />
+                  </svg>
+                </div>
+                <span class="card__reviews">1,3M review</span>
+              </div>
+              <p class="card__describe">
+                dystopian novel written in 1931 by English author Aldous Huxley,
+                and published in 1932. Largely set in...
+              </p>
+              <span class="card__price">$12.43</span>
+              <button class="card__btn load-more-btn">Add to cart</button>
+            </div>
+          </article>
+
+          <!-- Карточка 5 -->
+          <article class="card">
+            <div class="card__cover">
+              <img src="/img/book-4.png" alt="Cover" class="card__image" />
+            </div>
+            <div class="card__info">
+              <p class="card__author">Aldous Huxley</p>
+              <h3 class="card__name">Brave new world</h3>
+              <div class="card__rating">
+                <div class="card__stars">
+                  <svg
+                    class="card__star card__star--active"
+                    viewBox="0 0 12 12"
+                  >
+                    <path
+                      d="M6 0l1.5 4.5H12l-3.5 2.5 1.5 4.5L6 8.5 2.5 11l1.5-4.5L0 4.5h4.5z"
+                    />
+                  </svg>
+                  <svg
+                    class="card__star card__star--active"
+                    viewBox="0 0 12 12"
+                  >
+                    <path
+                      d="M6 0l1.5 4.5H12l-3.5 2.5 1.5 4.5L6 8.5 2.5 11l1.5-4.5L0 4.5h4.5z"
+                    />
+                  </svg>
+                  <svg
+                    class="card__star card__star--active"
+                    viewBox="0 0 12 12"
+                  >
+                    <path
+                      d="M6 0l1.5 4.5H12l-3.5 2.5 1.5 4.5L6 8.5 2.5 11l1.5-4.5L0 4.5h4.5z"
+                    />
+                  </svg>
+                  <svg
+                    class="card__star card__star--active"
+                    viewBox="0 0 12 12"
+                  >
+                    <path
+                      d="M6 0l1.5 4.5H12l-3.5 2.5 1.5 4.5L6 8.5 2.5 11l1.5-4.5L0 4.5h4.5z"
+                    />
+                  </svg>
+                  <svg
+                    class="card__star card__star--inactive"
+                    viewBox="0 0 12 12"
+                  >
+                    <path
+                      d="M6 0l1.5 4.5H12l-3.5 2.5 1.5 4.5L6 8.5 2.5 11l1.5-4.5L0 4.5h4.5z"
+                    />
+                  </svg>
+                </div>
+                <span class="card__reviews">1,3M review</span>
+              </div>
+              <p class="card__describe">
+                dystopian novel written in 1931 by English author Aldous Huxley,
+                and published in 1932. Largely set in...
+              </p>
+              <span class="card__price">$12.43</span>
+              <button class="card__btn load-more-btn">Add to cart</button>
+            </div>
+          </article>
+
+          <!-- Карточка 6 -->
+          <article class="card">
+            <div class="card__cover">
+              <img src="/img/book-4.png" alt="Cover" class="card__image" />
+            </div>
+            <div class="card__info">
+              <p class="card__author">Aldous Huxley</p>
+              <h3 class="card__name">Brave new world</h3>
+              <div class="card__rating">
+                <div class="card__stars">
+                  <svg
+                    class="card__star card__star--active"
+                    viewBox="0 0 12 12"
+                  >
+                    <path
+                      d="M6 0l1.5 4.5H12l-3.5 2.5 1.5 4.5L6 8.5 2.5 11l1.5-4.5L0 4.5h4.5z"
+                    />
+                  </svg>
+                  <svg
+                    class="card__star card__star--active"
+                    viewBox="0 0 12 12"
+                  >
+                    <path
+                      d="M6 0l1.5 4.5H12l-3.5 2.5 1.5 4.5L6 8.5 2.5 11l1.5-4.5L0 4.5h4.5z"
+                    />
+                  </svg>
+                  <svg
+                    class="card__star card__star--active"
+                    viewBox="0 0 12 12"
+                  >
+                    <path
+                      d="M6 0l1.5 4.5H12l-3.5 2.5 1.5 4.5L6 8.5 2.5 11l1.5-4.5L0 4.5h4.5z"
+                    />
+                  </svg>
+                  <svg
+                    class="card__star card__star--active"
+                    viewBox="0 0 12 12"
+                  >
+                    <path
+                      d="M6 0l1.5 4.5H12l-3.5 2.5 1.5 4.5L6 8.5 2.5 11l1.5-4.5L0 4.5h4.5z"
+                    />
+                  </svg>
+                  <svg
+                    class="card__star card__star--inactive"
+                    viewBox="0 0 12 12"
+                  >
+                    <path
+                      d="M6 0l1.5 4.5H12l-3.5 2.5 1.5 4.5L6 8.5 2.5 11l1.5-4.5L0 4.5h4.5z"
+                    />
+                  </svg>
+                </div>
+                <span class="card__reviews">1,3M review</span>
+              </div>
+              <p class="card__describe">
+                dystopian novel written in 1931 by English author Aldous Huxley,
+                and published in 1932. Largely set in...
+              </p>
+              <span class="card__price">$12.43</span>
+              <button class="card__btn load-more-btn">Add to cart</button>
+            </div>
+          </article>
         </div>
+
+        <!-- ✅ Панель категорий -->
+        <div class="category-panel">
+          <ul class="category-panel__list"></ul>
+        </div>
+
+        <!-- ✅ Кнопка Load more (в грид-ряду 6) -->
         <div class="row-placeholder">
           <button class="load-more-btn">
-            <span class="load-more-bt__text">Load more</span>
+            <span class="load-more-btn__text">Load more</span>
           </button>
         </div>
 

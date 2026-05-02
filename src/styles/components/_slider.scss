@@ -192,6 +192,19 @@
 /* =========================================
    SLIDER PAGINATION (DOTS)
    ========================================= */
+.grid-separator {
+  grid-row: 2; /* Занимает новый трек 46px */
+  width: 56px;
+  height: 12px;
+  align-self: center; /* Вертикальное центрирование в треке */
+  justify-self: center; /* Горизонтальное центрирование в колонке */
+  /* background: var(--bg-row); /* Временная заливка для отладки */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
 .grid-separator__dot {
   width: 12px;
   height: 12px;

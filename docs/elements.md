@@ -619,3 +619,162 @@ const sliders = [
 | ------ | ------------------ | -------- |
 | margin | 4px 20px auto 20px |          |
 | path   | /img/direct.svg    |          |
+
+# category
+
+## container category (parent main-grig row-3)
+
+| param            | value      | describe     |
+| ---------------- | ---------- | ------------ |
+| width            | 416px      |              |
+| height           | 710px      |              |
+| z-index          | 1          | под карточки |
+| content          | 1          |              |
+| breakground      | #EFEEF6    |              |
+| font-family      | Montserrat |              |
+| font-weight      | 700        | active       |
+| font-size        | 16px       | active       |
+| font-color       | #1C2A39    | active       |
+| text-width       | hug        |              |
+| text-height      | 40px       | active       |
+| font-weight      | 500        | not active   |
+| font-size        | 12px       | not active   |
+| font-color       | #5C6A79    | not active   |
+| text-height      | 15px       | not active   |
+| leading-trim     | NONE       |              |
+| line-height      | 100%       |              |
+| letter-spacing   | 0%         |              |
+| text-transform   | capitalize |              |
+| font-style       | Medium     |              |
+| padding-left     | 160px      |              |
+| margin-top       | 47px       |              |
+| gap list         | 23px       |
+| count categories | 16         |              |
+| top              | -46px      |              |
+| left             | -160px     |              |
+
+# cards
+
+## card (parent grid) - уже создан, есть
+
+grid-column 1fr 1fr
+
+### book-cover (parent grid-column--1)
+
+| param   | value | describe |
+| ------- | ----- | -------- |
+| width   | 100%  |          |
+| height  | 100%  |          |
+| opacity | 1     |          |
+| angle   | 0 deg |          |
+| scale   | 1     |          |
+
+### book-info (parent grid-column--2)
+
+| param      | value  | describe |
+| ---------- | ------ | -------- |
+| width      | 176px  |          |
+| height     | 203px  |          |
+| vertical   | medium |          |
+| horizontal | right  |          |
+
+### book-author (parent book-info) class: book-info
+
+| param          | value         | describe  |
+| -------------- | ------------- | --------- |
+| width          | 100%          |           |
+| height         | 14px          |           |
+| top            | 0px           |           |
+| margin-bottom  | 4px           |           |
+| taxt-align     | left          |           |
+| font-family    | Open Sans     | book-info |
+| font-weight    | 400           |           |
+| font-size      | 10px          |           |
+| leading-trim   | NONE          |           |
+| line-height    | 100%          |           |
+| letter-spacing | 0%            |           |
+| text-transform | capitalize    |           |
+| content        | Aldous Huxley |           |
+| color          | #5C6A79       |           |
+
+### book-name (parent book-info)
+
+| param          | value           | describe  |
+| -------------- | --------------- | --------- |
+| width          | 100%            |           |
+| height         | 20px            |           |
+| margin-bottom  | 4px             |           |
+| taxt-align     | left            |           |
+| font-family    | Montserrat      | book-name |
+| font-weight    | 700             |           |
+| font-size      | 16px            |           |
+| leading-trim   | NONE            |           |
+| line-height    | 100%            |           |
+| letter-spacing | 0%              |           |
+| text-transform | capitalize      |           |
+| content        | Brave new world |           |
+| color          | #1C2A39         |           |
+
+### book-rating (parent book-info)
+
+| param         | value | describe |
+| ------------- | ----- | -------- |
+| width         | 100%  |          |
+| height        | 14px  |          |
+| margin-bottom | 16px  |          |
+| taxt-align    | left  |          |
+
+### book-count-stars (parent book-rating)
+
+| param       | value | describe |
+| ----------- | ----- | -------- |
+| width       | 64px  |          |
+| gap         | 1     |          |
+| margin-left | 0     |          |
+
+### star (parent book-count-stars)
+
+| param    | value   | describe                |
+| -------- | ------- | ----------------------- |
+| width    | 12px    |                         |
+| height   | 12px    |                         |
+| vernical | medium  |                         |
+| color    | #F2C94C | active                  |
+| color    | #EEEDF5 | not active              |
+| count    | 5       | 4 active + 1 not acnive |
+
+### count-review (parent book-count-stars)
+
+| param      | value       | describe       |
+| ---------- | ----------- | -------------- |
+| width      | hug         |                |
+| height     | 12px        |                |
+| vernical   | medium      |                |
+| content    | 1,3M review |                |
+| typography | book-info   | см book-author |
+
+### book-describe (parent book-info)
+
+| param         | value                                                                                                     | describe       |
+| ------------- | --------------------------------------------------------------------------------------------------------- | -------------- |
+| width         | hug                                                                                                       |                |
+| height        | 39px                                                                                                      |                |
+| margin-bottom | 16px                                                                                                      |                |
+| text-align    | left                                                                                                      |                |
+| content       | dystopian novel written in 1931 by English author Aldous Huxley, and published in 1932. Largely set in... |                |
+| typography    | book-info                                                                                                 | см book-author |
+
+### book-price (parent book-info)
+
+| param          | value     | describe     |
+| -------------- | --------- | ------------ |
+| width          | hug       |              |
+| height         | 16px      |              |
+| margin-bottom  | 16px      |              |
+| text-align     | left      |              |
+| content        | $12.43    |              |
+| typography     | book-mame | см book-name |
+| font-size      | 13px      | modify       |
+| text-transform | uppercase | modify       |
+
+### book-button (parent book-info) class load-more-btn
