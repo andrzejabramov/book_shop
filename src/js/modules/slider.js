@@ -5,7 +5,7 @@ export function initSlider() {
   if (!container || !sliderData.length) return;
 
   let activeIndex = 0;
-  const intervalTime = 24 * 60 * 60 * 1000; // 24 часа
+  const intervalTime = 5000; //24 * 60 * 60 * 1000; // 24 часа
 
   // Вспомогательная функция: генерация inline-стилей для картинки
   function getImageStyle(slide) {

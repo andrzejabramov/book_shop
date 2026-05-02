@@ -4,12 +4,17 @@
   box-sizing: border-box;
 }
 
+:root {
+  --scale: 1.1; /* Коэффициент увеличения/уменьшения обложки */
+  --posY: -5px; /* Сдвиг вверх/вниз (отрицательное = вверх, положительное = вниз) */
+}
+
 body {
   font-family:
     system-ui,
     -apple-system,
     sans-serif;
-  background-color: #f5f5f5;
+  /*background-color: #f5f5f5;*/
   min-height: 100vh;
   color: #333;
 }
@@ -30,7 +35,7 @@ body {
 @import "components/header";
 @import "components/slider";
 @import "components/_card";
-@import "debug"; // Отладочные цвета/рамки
+// @import "debug"; // Отладочные цвета/рамки
 
 /* 3. Грид: начинается сразу от нижней границы шапки */
 .main-grid {
@@ -47,7 +52,7 @@ body {
 
 /* 4. Баннер: занимает 1-й трек (702px) */
 .banner {
-  grid-row: 1;
+  /*grid-row: 1;*/
   width: 100%;
   background: var(--bg-banner);
   color: var(--text-color);
@@ -62,7 +67,7 @@ body {
 /* 5. Сетка карточек: занимает 3-й трек (auto растягивается под контент) */
 .card-grid {
   position: relative;
-  z-index: 2;
+  z-index: 5;
   grid-row: 3; /* ✅ Сдвинуто на 3, т.к. 2-й трек теперь = отступ 180px */
   width: 100%;
   padding-left: 196px;
@@ -73,19 +78,16 @@ body {
   grid-template-rows: repeat(3, 300px);
   column-gap: 76px;
   row-gap: 96px;
-  background: var(--bg-card-grid);
+  /*background: var(--bg-card-grid);*/
 }
 
 /* 6. Карточка */
 .card {
   width: 424px;
   height: 300px;
-  border: 1px solid #4c3db2;
-  background: var(--bg-card);
   color: var(--text-color);
   font-size: 20px;
   font-weight: 700;
-  display: flex;
   align-items: center;
   justify-content: center;
 }
@@ -98,14 +100,15 @@ body {
   display: flex;
   align-items: center;
   justify-content: flex-start; /* ✅ Позволяет margin-left работать точно */
-  background: var(--bg-row);
+  padding-left: 581px;
+  /*background: var(--bg-row);*/
 }
 
 /* Кнопка */
 .load-more-btn {
   width: 176px;
   height: 45px;
-  margin-left: 581px; /* ✅ Точное смещение по ТЗ */
+  /*margin-left: 581px; /* ✅ Точное смещение по ТЗ */
   border: 1px solid #4c3db2;
   background: transparent;
   cursor: pointer;
@@ -117,10 +120,10 @@ body {
 
 /* Текст кнопки */
 .load-more-btn__text {
-  width: 53px;
-  height: 10px;
+  width: 100%;
+  height: 12px;
   font-family: "Montserrat", sans-serif;
-  font-size: 10px;
+  font-size: 12px;
   line-height: 100%;
   text-align: center;
   color: #4c3db2;
