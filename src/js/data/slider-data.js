@@ -78,8 +78,25 @@ export const sliderData = [
   {
     id: 2,
     img: "/img/leaves_trees.png",
-    scale: 1,
+    scale: 1, // 🎛️ Подбери под макет (1.0 = оригинал)
+    posY: "1%", // 🎛️ Вертикальная привязка (0% = верх, 50% = центр)
     background: "transparent",
-    blocks: [],
+    blocks: [
+      {
+        text: "Check out",
+        style: "strict",
+        variant: "check", // 👈 Новый модификатор: 45px / 600
+        transform: "uppercase",
+        pos: { margin: "148px auto auto 425px", width: "hug" },
+      },
+      {
+        text: "OUR<br>cozy books Selection",
+        style: "art",
+        variant: "cozy", // 👈 Новый вариант: 90px / 900 / красная тень
+        transform: "uppercase",
+        shadow: { x: 10, y: 10, color: "#7B1010" },
+        pos: { margin: "212px auto auto 233px", width: "653px" }, // 👈 Фикс. ширина = перенос текста
+      },
+    ],
   },
 ];

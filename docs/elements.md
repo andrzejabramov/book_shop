@@ -432,9 +432,9 @@ const sliders = [
 | shift-shadow-right  | 5px                   |          |
 | shift-shadow-bottom | 5px                   |          |
 
-## top
+## leaves-trees
 
-### Typography common
+### Typography common (то же, что и для роедыдущих слайдов)
 
 | param          | value     | describe |
 | -------------- | --------- | -------- |
@@ -531,3 +531,91 @@ const sliders = [
 | line-height    | 100%       |                |
 | letter-spacing | 0%         |                |
 | text-transform | capitalize |                |
+
+# actors
+
+## Content
+
+### Typography common
+
+| param          | value     | describe |
+| -------------- | --------- | -------- |
+| font           | monserrat |          |
+| opacity        | 1         |          |
+| angle          | 0 deg     |          |
+| leading-trim   | NONE      |          |
+| line-height    | 100%      |          |
+| letter-spacing | 0%        |          |
+| text-align     | left      |          |
+
+### стрелка-указатель общие параметры
+
+| param  | value | describe |
+| ------ | ----- | -------- |
+| width  | 55px  |          |
+| height | 12px  |          |
+
+## elm-1 (parent main-grid)
+
+| param       | value                | describe      |
+| ----------- | -------------------- | ------------- |
+| width       | 149px                |               |
+| height      | 204px                |               |
+| margin      | 79px auto auto -63px |               |
+| z-index     | 1                    | поверх slider |
+| breakground | #9E98DC              |               |
+
+### content-elm-1 (parent elm-1)
+
+| param  | value                | describe |
+| ------ | -------------------- | -------- |
+| width  | 109px                |          |
+| height | 66px                 |          |
+| margin | 102px 20px auto 20px |          |
+
+### typography-elm-1 (type: strict)
+
+| param      | value                  | describe |
+| ---------- | ---------------------- | -------- |
+| weight     | 700                    |          |
+| size       | 18px                   |          |
+| case       | uppercase              |          |
+| content    | Change old book on new |          |
+| text-align | left                   |          |
+
+### стрелка-указатель (см общие параметры parent elm-1)
+
+| param  | value              | describe |
+| ------ | ------------------ | -------- |
+| margin | 4px 20px auto 20px |          |
+| path   | /img/direct.svg    |          |
+
+## elm-2 (parent main-grid)
+
+| param       | value                 | describe |
+| ----------- | --------------------- | -------- |
+| width       | 158px                 |          |
+| height      | 273px                 |          |
+| margin      | 475px -21px auto 23px |          |
+| breakground | #FF8FE6               |          |
+
+### content-elm-2 (parent elm-2)
+
+| param  | value                | describe |
+| ------ | -------------------- | -------- |
+| width  | 69px                 |          |
+| height | 88px                 |          |
+| margin | 102px 20px auto 20px |          |
+
+### typography-elm-2 (type: strict) - точно так же как в elm-1
+
+| param   | value              | describe |
+| ------- | ------------------ | -------- |
+| content | top 100 books 2022 |          |
+
+### стрелка-указатель (см общие параметры parent elm-1)
+
+| param  | value              | describe |
+| ------ | ------------------ | -------- |
+| margin | 4px 20px auto 20px |          |
+| path   | /img/direct.svg    |          |

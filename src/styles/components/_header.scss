@@ -98,3 +98,52 @@
   width: 14px;
   height: 17px;
 }
+
+/* =========================================
+   CART BADGE (Счётчик товаров)
+   ========================================= */
+
+/* Контекст позиционирования для бейджа */
+.header {
+  position: relative; /* Необходимо для absolute-позиционирования дочернего бейджа */
+}
+
+/* Родительский блок: привязка к header */
+.header__cart-badge {
+  position: absolute;
+  top: 61px; /* margin-top: 61px */
+  right: 155px; /* margin-right: 155px */
+  width: 13px;
+  height: 13px;
+  display: flex; /* Центрирование цифры внутри круга */
+  align-items: center;
+  justify-content: center;
+  z-index: 10; /* Поверх всех элементов header */
+}
+
+/* Красный эллипс (круг) */
+.header__badge-ellipse {
+  position: absolute;
+  inset: 0;
+  width: 13px;
+  height: 13px;
+  background: #ff353a;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Цифра */
+.header__badge-digit {
+  position: relative;
+  width: 6px; /* По спецификации */
+  height: 12px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500; /* Medium в Figma = weight 500 */
+  font-size: 10px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: #ffffff; /* Текст на красном фоне */
+  text-align: center;
+  z-index: 2; /* Поверх эллипса */
+  /* text-transform: capitalize (для цифры не влияет, оставлено для соответствия ТЗ) */
+}
