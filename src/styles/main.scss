@@ -81,17 +81,6 @@ body {
   /*background: var(--bg-card-grid);*/
 }
 
-/* 6. Карточка */
-.card {
-  width: 424px;
-  height: 300px;
-  color: var(--text-color);
-  font-size: 20px;
-  font-weight: 700;
-  align-items: center;
-  justify-content: center;
-}
-
 /* Контейнер 5-го ряда */
 .row-placeholder {
   grid-row: 5;

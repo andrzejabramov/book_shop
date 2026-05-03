@@ -287,4 +287,35 @@
   margin: 4px 20px 0 20px;
   display: block;
   object-fit: contain;
+  transition:
+    transform 0.25s ease,
+    filter 0.25s ease;
+}
+
+/* === ИНТЕРАКТИВНЫЕ СТРЕЛКИ === */
+.cta-block__link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  cursor: pointer;
+}
+
+/* Наведение: лёгкий сдвиг вправо + мягкая тень */
+.cta-block__link:hover {
+  transform: translateX(4px);
+}
+
+.cta-block__link:hover .cta-block__arrow {
+  /* drop-shadow идеален для SVG с прозрачным фоном */
+  filter: drop-shadow(0 3px 6px rgba(76, 61, 178, 0.35));
+}
+
+/* Клик: тактильное "вдавливание" + усиление сдвига */
+.cta-block__link:active {
+  transform: translateX(6px) scale(0.92);
+}
+
+.cta-block__link:active .cta-block__arrow {
+  filter: drop-shadow(0 1px 3px rgba(76, 61, 178, 0.5));
 }

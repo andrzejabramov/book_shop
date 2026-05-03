@@ -20,6 +20,7 @@ module.exports = {
         },
       },
       // 🎨 SCSS / SASS (НОВОЕ ПРАВИЛО)
+      // 🎨 SCSS / SASS
       {
         test: /\.scss$/,
         oneOf: [
@@ -39,7 +40,11 @@ module.exports = {
               {
                 loader: "sass-loader",
                 options: {
-                  api: "modern", // 👈 Исправляет предупреждение о депрекейте
+                  api: "modern",
+                  // ✅ Гасим варнинги про устаревший @import
+                  sassOptions: {
+                    silenceDeprecations: ["import"],
+                  },
                 },
               },
             ],
@@ -52,7 +57,11 @@ module.exports = {
               {
                 loader: "sass-loader",
                 options: {
-                  api: "modern", // 👈 Исправляет предупреждение о депрекейте
+                  api: "modern",
+                  // ✅ Гасим варнинги про устаревший @import
+                  sassOptions: {
+                    silenceDeprecations: ["import"],
+                  },
                 },
               },
             ],
