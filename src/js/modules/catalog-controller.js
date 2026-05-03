@@ -52,7 +52,7 @@ const CART = {
 // === 🌐 API CONFIG ===
 const API_BASE = "https://openlibrary.org/search.json";
 const COVER_BASE = "https://covers.openlibrary.org/b/id/";
-const FALLBACK_COVER = "/img/book-1.png";
+const FALLBACK_COVER = "/img/placeholder.png";
 
 // === STATE ===
 const STATE = {
